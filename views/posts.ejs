@@ -1,0 +1,28 @@
+<%- include('./partials/header') %>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% posts.forEach( post  => { %>
+            <tr>
+                <th scope="row"><%= post.id %></th>
+                <td><%= post.title %></td>
+                <td>Edit</td>
+                <td>Delete</td>
+              </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+</div>
+
+
+<%- include('./partials/footer') %>
